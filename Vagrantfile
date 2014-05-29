@@ -94,6 +94,8 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "mysql::server"
     chef.add_recipe "mysql-chef_gem"
     chef.add_recipe "database"
+    chef.add_recipe "php"
+    chef.add_recipe "php::module_mysql"
     chef.add_recipe "apache2"
     chef.add_recipe "apache2::mod_php5"
     chef.add_recipe "apache2::mod_rewrite"
@@ -106,9 +108,6 @@ Vagrant.configure("2") do |config|
              :server_root_password=> "root",
          },
 
-         :apache => {
-             :default_site_enabled => true,
-         }
     }
   end
 
