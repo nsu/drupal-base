@@ -91,6 +91,8 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "apt"
     chef.add_recipe "mysql::client"
     chef.add_recipe "mysql::server"
+    chef.add_recipe "mysql-chef_gem"
+    chef.add_recipe "database"
     chef.add_recipe "apache2"
     chef.add_recipe "apache2::mod_php5"
     chef.add_recipe "drupal"
