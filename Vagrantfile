@@ -96,6 +96,7 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "database"
     chef.add_recipe "apache2"
     chef.add_recipe "apache2::mod_php5"
+    chef.add_recipe "apache2::mod_rewrite"
     chef.add_recipe "drupal"
   
     # You may also specify custom JSON attributes:
