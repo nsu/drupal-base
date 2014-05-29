@@ -7,11 +7,16 @@
 # All rights reserved - Do Not Redistribute
 #
 
+
+web_app drupal do 
+  server_name "localhost"
+  docroot "/var/www"
+  template "drupal.conf.erb" 
+end
+
 # Install required PHP5 modules for Drupal
-for p in [ "php5-gd",  "php5-mysql" ] do
-    package p do
-        action [:install]
-    end
+package "php5-gd" do
+    action [:install]
 end
 
 #Create a Drupal database & User
