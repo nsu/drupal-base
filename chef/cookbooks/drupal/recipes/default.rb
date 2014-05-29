@@ -8,7 +8,7 @@
 #
 
 
-web_app drupal do 
+web_app "drupal" do 
   server_name "localhost"
   docroot "/var/www"
   template "drupal.conf.erb" 
