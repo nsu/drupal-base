@@ -43,6 +43,10 @@ Vagrant.configure("2") do |config|
     group: "www-data",
     mount_options: ["dmode=775,fmode=664"]
 
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 1024
+  end
+
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
