@@ -1,0 +1,1 @@
+default['drush']['version'] = 'latest'
