@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "chef/ubuntu-12.04"
+  config.vm.box = "ubuntu/trusty32"
   config.omnibus.chef_version = :latest
 
   # The url from where the 'config.vm.box' box will be fetched if it
