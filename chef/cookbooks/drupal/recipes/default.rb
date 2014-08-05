@@ -19,6 +19,11 @@ package "php5-gd" do
     action [:install]
 end
 
+# Install PHP5 APC for caching
+package "php5-apc" do
+    action [:install]
+end
+
 #Create a Drupal database & User
 mysql_connection_info = {:host => "localhost", :username => 'root', :password => node['mysql']['server_root_password']}
 
