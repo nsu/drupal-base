@@ -20,7 +20,7 @@ package "php5-gd" do
 end
 
 # Install PHP5 APC for caching
-package "php5-apc" do
+package "php5-apcu" do
     action [:install]
 end
 
