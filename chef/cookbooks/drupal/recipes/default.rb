@@ -8,6 +8,26 @@
 #
 
 
+directory "/etc/mysql.conf.d/" do
+    owner "root"
+    group "root"
+    mode 00644
+    action :create
+end
+
+
+file "/etc/mysql.conf.d/drupal.cnf" do
+    owner "root"
+    group "root"
+    mode "0755"
+    action :create
+    content <<-EOF
+        [mysqld]
+        max_allowed_packets=32M
+    EOF
+end
+
+
 web_app "drupal" do 
   server_name "localhost"
   docroot "/var/www"
